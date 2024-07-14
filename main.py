@@ -1,12 +1,15 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(layout="wide")
 
 col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
+
 
 with st.container():
     with col1:
-        st.image("images/photo.png")
+        st.image("photo.png")
 
     with col2:
         st.title("Khaled Turkestani")
@@ -18,3 +21,7 @@ with st.container():
 
 with st.container():
     st.text("<b>Below you can find some of the apps i have built using Python. Feel free to contact me anytime.</b>")
+
+with st.container():
+    with col3:
+        pd.read_csv("data.csv", sep=";")
